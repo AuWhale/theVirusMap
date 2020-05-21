@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+	   <title>新冠病毒疫情数据</title>
+	   <style>
+	   
+			a{
+				text-decoration:none;
+			}
+			
+			tr th{
+				width:150px;
+				height:50px;
+				font-size:20px;
+				background-color:#A9A9A9;
+				font-family:FangSong;
+			}
+			
+			tr td{
+				height:50px;
+				font-size:20px;
+				padding-right:10px;
+			}
+			
+			#id-div-test{
+				height:150px;
+				width:1292px;
+				position:relative;
+			}
+			
+			#graph{
+				height:340px;
+				width:450px;
+				position:absolute;
+			}
+			
+			#form{
+				height:815px;
+				width:842px;
+				float:right;
+				position:relative;
+			}
+			
+			#global_data_button{
+				height:229px;
+				width:450px;
+				margin-top:340px;
+				position:absolute;
+			}
+			#global_data_button img{
+				height:100%;
+				width:100%;
+			}
+			
+			#dad_graph_foam_button{
+				height:815px;
+				width:1352px;
+				position:relative;
+			}
+			
+			/*重要信息通知栏*/
+			#alert{
+				height:500px;
+				width:548px;
+				margin-top:0px;
+				float:right;
+				position:relative;
+			}
+			#alert img{
+				margin-left:40px;
+			}
+			#marquee1{
+				margin-left:80px;
+			}
+			#marquee1 p{
+				height:40px;
+			}
+			
+			
+			#left_content{
+				height:915px;
+				width:1352px;
+				padding-left:20px;
+				position:absolute;
+			}
+			
+			#content{
+				height:915px;
+				width:1920px;
+				position:relative;
+			}
+	   </style>
+   </head>
+   
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%; weight: 80%"></div>
+       
+	   <div id="content">
+		   <div id="left_content">
+			   <div id="id-div-test"></div>
+			   <div id="dad_graph_foam_button">
+				   <div id="graph">
+					
+				   </div>
+				   
+				   <div id="form" >
+					<table id="table">
+						<tr>
+							<th style="width:150px;">地区</th>
+							<th>现存确诊</th>
+							<th>累计确诊</th>
+							<th>死亡</th>
+							<th>治愈</th>
+							<th>疫情</th>
+						</tr>
+						
+						<tr>
+							<td align="center" style="padding-right:0px;">香港</td>
+							<td align="right">553</td>
+							<td align="right">1016</td>
+							<td align="right">4</td>
+							<td align="right">459</td>
+							<td align="right"><a href = “”>详情></td>
+						</tr>
+						
+						<tr>
+							<td align="center" style="padding-right:0px;">香港</td>
+							<td align="right">553</td>
+							<td align="right">1016</td>
+							<td align="right">4</td>
+							<td align="right">459</td>
+							<td align="right"><a href = “”>详情></td>
+						</tr>
+						
+						<tr>
+							<td align="center" style="padding-right:0px;">香港</td>
+							<td align="right">553</td>
+							<td align="right">1016</td>
+							<td align="right">4</td>
+							<td align="right">459</td>
+							<td align="right"><a href = “”>详情></td>
+						</tr>
+						
+						<tr>
+							<td align="center" style="padding-right:0px;">香港</td>
+							<td align="right">553</td>
+							<td align="right">1016</td>
+							<td align="right">4</td>
+							<td align="right">459</td>
+							<td align="right"><a href = “”>详情></td>
+						</tr>
+						
+						<tr>
+							<td align="center" style="padding-right:0px;">香港</td>
+							<td align="right">553</td>
+							<td align="right">1016</td>
+							<td align="right">4</td>
+							<td align="right">459</td>
+							<td align="right"><a href = “”>详情></td>
+						</tr>
+						
+						<tr>
+							<td align="center" style="padding-right:0px;">香港</td>
+							<td align="right">553</td>
+							<td align="right">1016</td>
+							<td align="right">4</td>
+							<td align="right">459</td>
+							<td align="right"><a href = “”>详情></td>
+						</tr>
+						
+					</table>
+				   </div>
+				   
+				   <div id="global_data_button" >
+						<a href="https://coronavirus.jhu.edu/map.html">
+							<img src="global_data_button.png"></img>
+						</a>
+				   </div>
+			   </div>
+			</div>
+			
+			<div id="alert">
+				<img src="alert.png"></img>
+				<div id="marquee1">
+					<marquee onmouseover="this.stop()" onmouseout="this.start()" 
+					scrollamount="1" scrolldelay="5" direction="up">
+						<p>4月14日全国新增16例！</p>
+						<p>黑龙江新增8例！</p>
+						<p>吃降压药会降低感染风险系谣言！</p>
+						<p>俄媒：世界应共同抗疫而非推诿甩锅！</p>
+						<p>勤洗手，戴口罩，不聚集</p>
+						<p>请大家做好个人防护工作！</p>
+					</marquee>
+				</div>
+			</div>
+		</div>
+
+	   
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7a6QKaIilZftIMmKGAFLG7QT1GLfIncg"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+       <script src="Utils.js"></script>
+       <script src="map_1.js"></script>
+	   <script src="chart.js"></script>
+       <!--<script src="/test.js"></script>-->
+   </body>
+</html>
