@@ -387,7 +387,6 @@ var geoCoordMap = {
     '合肥':[117.27,31.86],
     '武汉':[114.31,30.52],
     '大庆':[125.03,46.58]
-	
 };
 
 var convertData = function (data) {
