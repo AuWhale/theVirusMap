@@ -31,8 +31,9 @@
 			
 			#graph{
 				height:340px;
-				width:450px;
+				width:470px;
 				position:absolute;
+				margin-bottom:40px;
 			}
 			
 			#form{
@@ -123,15 +124,6 @@
 								<td align="right">459</td>
 								<td align="right"><a href = “”>详情></td>
 							</tr>
-							
-							<tr>
-								<td align="center" style="padding-right:0px;">香港</td>
-								<td class="existing-confirmed" align="right">553</td>
-								<td align="right">1016</td>
-								<td align="right">4</td>
-								<td align="right">459</td>
-								<td align="right"><a href = “”>详情></td>
-							</tr>
 						</div>
 					</table> -->
 				   </div>
@@ -160,19 +152,25 @@
 			</div>
 		</div>
 
-	   
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
-       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7a6QKaIilZftIMmKGAFLG7QT1GLfIncg"></script>
-       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
-       <script src="Utils.js"></script>
-       <script src="map_1.js"></script>
-		<script src="chart.js"></script>
+		<!-- 数据文件 -->
+		<script src="data.js"></script>
+		<script src="data_factory.js"></script>
+		
+		<!-- echart -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7a6QKaIilZftIMmKGAFLG7QT1GLfIncg"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+
+		<!-- 接口 -->
+		<script src="Utils.js"></script>
+		<script src="map.js"></script>
+		<script src="chart_test.js"></script>
 		<script src="sort.js"></script>
-       <!--<script src="/test.js"></script>-->
+		<!--<script src="/test.js"></script>-->
    </body>
 </html>

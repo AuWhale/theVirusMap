@@ -1,26 +1,30 @@
 var test_data = [
-    {
-        region: "香港",
-        existing_confirmed: 553,
-        cumulative_confirmed: 900,
-        death: 4,
-        cure: 459,
-    },
-    {
-        region: "广东",
-        existing_confirmed: 500,
-        cumulative_confirmed: 1100,
-        death: 6,
-        cure: 400,
-    },
-    {
-        region: "四川",
-        existing_confirmed: 501,
-        cumulative_confirmed: 1000,
-        death: 6,
-        cure: 400,
-    },
+    // {
+    //     region: "香港",
+    //     existing_confirmed: 553,
+    //     cumulative_confirmed: 900,
+    //     death: 4,
+    //     cure: 459,
+    // },
 ]
+
+// 列表的数据接口
+var rawDataToTableData = function(rawData) {
+    // log(rawData)
+    // 选出 国家是 中国的 数据 filter 这个不用管, 奇葩写法
+    var chinaData = rawData.results.filter(p => p.countryName == '中国')
+    for (let i = 0; i < chinaData.length; i++) {
+        let e = chinaData[i]
+        let o = {
+            region: e.provinceShortName,
+            existing_confirmed: e.currentConfirmedCount,
+            cumulative_confirmed: e.confirmedCount,
+            death: e.deadCount,
+            cure: e.curedCount,
+        }
+        test_data.push(o)
+    }
+}
 
 var setTable = function(list) {
     var table = e("#form")
@@ -83,6 +87,8 @@ var bindEvent = function() {
 }
 
 var __sortMain = function() {
+    var rawData = __rawData
+    rawDataToTableData(rawData)
     setTable(test_data)
     bindEvent()
 }
