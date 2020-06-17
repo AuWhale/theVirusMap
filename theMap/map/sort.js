@@ -44,7 +44,6 @@ var tableTemplate = function(list) {
                 <td align="right">${e.cumulative_confirmed}</td>
                 <td align="right">${e.death}</td>
                 <td align="right">${e.cure}</td>
-                <td align="right"><a href = “”>详情></td>
             </tr>
         `
         listStr += s
@@ -57,7 +56,6 @@ var tableTemplate = function(list) {
                 <th id="id-cumulative-confirmed">累计确诊</th>
                 <th>死亡</th>
                 <th>治愈</th>
-                <th>疫情</th>
             </tr>
             ${listStr}
         </table>
@@ -85,6 +83,7 @@ var bindEvent = function() {
         setTable(test_data)
     })
 }
+
 
 var __sortMain = function() {
     var rawData = __rawData
